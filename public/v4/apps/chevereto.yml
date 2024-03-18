@@ -3,7 +3,7 @@ services:
     $$cap_appname:
         depends_on:
             - $$cap_appname-mariadb
-        image: nmtan/chevereto:$$cap_chevereto_version
+        image: chevereto/chevereto:$$cap_chevereto_version
         restart: 'always'
         environment:
             TZ: $$cap_tz
@@ -36,8 +36,8 @@ caproverOneClickApp:
           defaultValue: Europe/Brussels
         - id: $$cap_chevereto_version
           label: Version Tag
-          description: Check out their Docker page for the valid tags https://hub.docker.com/r/nmtan/chevereto/tags
-          defaultValue: '1.2.3'
+          description: Check out their Docker page for the valid tags https://hub.docker.com/r/chevereto/chevereto/tags
+          defaultValue: 'latest'
         - id: $$cap_puid
           label: User ID
           defaultValue: '1000'
